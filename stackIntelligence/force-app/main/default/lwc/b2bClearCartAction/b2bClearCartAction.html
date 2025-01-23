@@ -1,0 +1,28 @@
+<!--
+  @description       : Clear Cart Button with Modal Confirmation
+  @author            : Diksha
+  @group             : 
+  @last modified on  : 01-23-2025
+  @last modified by  : Diksha
+-->
+<template>
+    <template if:true={showClearCart}>
+        <div class="clear-cart-container">
+            <lightning-button data-id="clearCart"
+                              label={clearCartLabel}
+                              title={clearCartTitle}
+                              variant="base"
+                              onclick={handleClearCart}>
+            </lightning-button>
+        </div>
+    </template>
+    <template if:true={modalPrompt}>
+        <c-b2b-confirmation-pop-up header-label={modalHeader}
+                            body-msg={modalBody}
+                            positive-response-button={positiveButton}
+                            negative-response-button={negativeButton}
+                            onpositiveresponse={handleDelete}
+                            onnegativeresponse={handleNegativeResponse}>
+        </c-b2b-confirmation-pop-up>
+    </template>
+</template>
