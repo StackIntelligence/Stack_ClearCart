@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <capabilities>
+        <capability>lightningCommunity__RelaxedCSP</capability>
+    </capabilities>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="clearCartLabel" type="String" label="Clear Cart Button Label" 
+                      description="Label for the Clear Cart button" default="Clear Cart" />
+            <property name="clearCartTitle" type="String" label="Clear Cart Button Title" 
+                      description="Title for the Clear Cart button" default="Clear all items from the cart" />
+            <property name="modalHeader" type="String" label="Modal Header" 
+                      description="Header text for the modal prompt" default="Remove all items from your cart?" />
+            <property name="modalBody" type="String" label="Modal Body Message" 
+                      description="Body message for the modal prompt" default="Are you sure you want to clear this cart?"/>
+            <property name="positiveButton" type="String" label="Positive Button Label" 
+                      description="Label for the positive response button in the modal"  default="Clear Cart" />
+            <property name="negativeButton" type="String" label="Negative Button Label" 
+                      description="Label for the negative response button in the modal" default="Cancel" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

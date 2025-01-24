@@ -1,0 +1,64 @@
+<!--
+  @description       : 
+  @author            : Diksha
+  @group             : 
+  @last modified on  : 01-23-2025
+  @last modified by  : Diksha
+-->
+<template>
+    <section role="dialog"
+             tabindex="-1"
+             aria-labelledby="modal-heading-01"
+             aria-modal="true"
+             aria-describedby="modal-content-id-1"
+             class={modalDialogClasses}>
+        <div id="modalContainer" class="slds-modal__container slds-grid slds-grid_vertical slds-grid_align-center modalWidth">
+
+            <!-- modal header start -->
+            <div id="header" class="slds-modal__header slds-text-align_center slds-p-around_medium">
+                <lightning-formatted-text value={headerLabel}
+                                          class="slds-text-heading_medium slds-hyphenate headerFont">
+                </lightning-formatted-text>
+                <lightning-button-icon icon-name="utility:close"
+                                       variant="bare-inverse"
+                                       label="close"
+                                       size="large"
+                                       alternative-text="close"
+                                       onclick={closeModal}
+                                       class="slds-modal__close iconColor">
+                </lightning-button-icon>
+            </div>
+
+            <!-- modal body start -->
+            <div id="modalContent" class="slds-modal__content slds-modal_full-content slds-p-around_medium slds-grid slds-grid_align-center">
+                <lightning-formatted-text value={bodyMsg} class="slds-align_absolute-center">
+                </lightning-formatted-text>
+            </div>
+
+            <!-- modal footer start -->
+            <div id="deletefooter" class="slds-modal__footer slds-grid slds-grid_align-spread">
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small">
+                    <lightning-button id="negativeBtn"
+                                      variant="neutral"
+                                      title="No"
+                                      disabled={negativeButtonDisable}
+                                      label={negativeResponseButton}
+                                      onclick={handleNegativeResponse}
+                                      class="lightning-button">
+                    </lightning-button>
+                </div>
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small">
+                    <lightning-button id="positiveBtn"
+                                      variant="brand"
+                                      title="Yes"
+                                      disabled={positiveButtonDisable}
+                                      label={positiveResponseButton}
+                                      onclick={handlePositiveResponse}
+                                      class="lightning-button">
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="return" class="slds-backdrop slds-backdrop_open"></div>
+</template>

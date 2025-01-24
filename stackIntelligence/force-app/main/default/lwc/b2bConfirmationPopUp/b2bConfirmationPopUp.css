@@ -1,0 +1,12 @@
+.fontWeight400 {
+    font-weight: 400;
+}
+
+.modalWidth {
+    max-width: 30rem;
+}
+
+.lightning-button {
+    display: grid; 
+    width: 100%
+}
